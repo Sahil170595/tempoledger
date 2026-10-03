@@ -7,10 +7,10 @@ the backend defaults to a simulated gateway. This is an engineering reference,
 not a validated behavioral model or a production delivery service.
 
 Portfolio: [work collection](https://chimeraforge.vercel.app/work).
-The [Scheduling Lab browser edition](https://chimeraforge.vercel.app/work/projects/scheduling-lab)
-is **pending merge of [PR #64](https://github.com/Sahil170595/Banterblogs/pull/64)**.
-That URL is the intended demo route, not a claim that it is currently published.
-This repository is the Python implementation, not the browser edition's engine.
+The [browser demo](https://chimeraforge.vercel.app/projects/systems/send-pacing) ports
+`scheduling/engine.py`, `audit.py` and `replay.py` to TypeScript with a bit-exact port of
+NumPy's legacy `RandomState`, reproduces this repository's replays to the microsecond, and
+runs the audit over 1,000 seeds. It does not include the API, database, workers or providers.
 
 ## Offline Reproduction
 
@@ -206,8 +206,8 @@ configuration examples, not credentials.
 This is a fresh, history-free source export with neutral module names, newly
 written documentation and synthetic examples/tests. It retains the meaningful
 scheduler/backend source, not private deployment records or datasets. The browser
-edition exposes local timing knobs, audits and visualizations, but not the Python
-API, database, workers, external providers or agent execution.
+demo runs the scheduler, audit and replay, but not the Python API, database,
+workers, external providers or agent execution.
 
 The original MIT copyright and permission notice is preserved in [LICENSE](LICENSE).
 [NOTICE](NOTICE.md) explains the retained attribution and release adaptations.
