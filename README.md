@@ -209,7 +209,7 @@ scheduler/backend source, not private deployment records or datasets. The browse
 demo runs the scheduler, audit and replay, but not the Python API, database,
 workers, external providers or agent execution.
 
-The original MIT copyright and permission notice is preserved in [LICENSE](LICENSE).
-[NOTICE](NOTICE.md) explains the retained attribution and release adaptations.
+Released under the MIT license; see [LICENSE](LICENSE). [NOTICE](NOTICE.md)
+lists the changes made for this release.
 Dependency licenses remain with their respective projects; dependencies are not
 vendored here.
