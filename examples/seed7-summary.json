@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "data": "authored-synthetic",
+  "seed": 7,
+  "numpy_version": "2.2.6",
+  "command": "python -B -m tempoledger.replay --seed 7",
+  "statistics": {
+    "count": 12,
+    "pause_count": 7,
+    "span_seconds": 7085.445401,
+    "mean_interval_seconds": 644.1314000909091,
+    "interval_cv": 1.4350389502216798,
+    "mean_wpm": 52.82427734029642
+  },
+  "violation_counts": {"before_preparation": 2}
+}

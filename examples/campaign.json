@@ -1,0 +1,10 @@
+{
+  "name": "Synthetic maintenance queue",
+  "total_messages": 3,
+  "duration_hours": 1,
+  "messages": [
+    {"content": "Synthetic event: inspect the fixture queue"},
+    {"content": "Synthetic event: record the sample checksum"},
+    {"content": "Synthetic event: finish the offline audit"}
+  ]
+}

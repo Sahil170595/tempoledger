@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tempoledger"
+version = "1.0.0"
+description = "Seeded workload scheduling and an inspectable asynchronous backend"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+dependencies = ["numpy>=1.26,<3", "pydantic>=2.5,<3", "pydantic-settings>=2.1,<3"]
+
+[project.optional-dependencies]
+backend = ["fastapi>=0.104,<1", "uvicorn>=0.24,<1", "asyncpg>=0.29,<1", "redis>=5,<8", "celery>=5.3,<6", "structlog>=23.2,<26", "slowapi>=0.1.9,<1", "tenacity>=8.2,<10", "pybreaker>=1.4,<2", "alembic>=1.13,<2", "sqlalchemy[asyncio]>=2,<3", "opentelemetry-api>=1.21,<2", "opentelemetry-sdk>=1.21,<2", "opentelemetry-exporter-otlp-proto-grpc>=1.21,<2"]
+providers = ["twilio>=8.10,<10", "openai>=1,<3"]
+dev = ["pytest>=8,<10", "httpx>=0.25,<1", "ruff>=0.9,<1"]
+
+[project.urls]
+Repository = "https://github.com/Sahil170595/tempoledger"
+Homepage = "https://chimeraforge.vercel.app/work"
+
+[project.scripts]
+tempoledger-replay = "tempoledger.replay:main"
+
+[tool.setuptools.packages.find]
+include = ["tempoledger*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
